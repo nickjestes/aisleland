@@ -28,7 +28,7 @@ function App() {
           <td>Bread</td>
           <td></td>
           <td>
-          <Form className='text-center'>
+           <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -42,7 +42,7 @@ function App() {
           <td>Cereal</td>
           <td></td>
           <td>
-          <Form className='text-center'>
+            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -56,7 +56,7 @@ function App() {
           <td>Granola Bars</td>
           <td></td>
           <td>
-          <Form className='text-center'>
+            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -70,7 +70,7 @@ function App() {
           <td>Pasta</td>
           <td></td>
           <td>
-          <Form className='text-center'>
+           <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -84,7 +84,7 @@ function App() {
           <td>Jams</td>
           <td></td>
           <td>
-          <Form className='text-center'>
+           <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -97,17 +97,44 @@ function App() {
         <tr>
           <td>Coffee</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Tea</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Baking</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Bulk Foods</td>
@@ -117,7 +144,16 @@ function App() {
         <tr>
           <td>Chips</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
       <tr>
           <td>Rice</td>
@@ -127,42 +163,114 @@ function App() {
         <tr>
           <td>Condiments</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Salad Dressing</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Eggs</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Juice</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Butter</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Milk</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Creamer</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Cheese</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
       </tbody>
     </Table>
@@ -183,57 +291,156 @@ function App() {
         <tr>
           <td>Bread</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Cereal</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Granola Bars</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Pasta</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Jams</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Coffee</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Tea</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Baking</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Bulk Foods</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Chips</td>
           <td></td>
-          <td></td>
+          <td>
+           <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
       <tr>
           <td>Rice</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
       </tbody>
     </Table>
@@ -254,37 +461,100 @@ function App() {
         <tr>
           <td>Tomatos</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Beans</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Peas</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Peaches</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Tuna</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Chili</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Soup</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
       </tbody>
     </Table>
@@ -312,52 +582,142 @@ function App() {
       <tr>
         <td>Paper Towels</td>
         <td></td>
-        <td></td>
+        <td>
+         <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Napkins</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Rubber Gloves</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Sponges</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Detergent</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Fabric Softener</td>
         <td></td>
-        <td></td>
+        <td>
+         <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Cleaners</td>
         <td></td>
-        <td></td>
+        <td>
+         <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Garbage Bags</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Toilet Paper</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Brooms and Mops</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
     </tbody>
   </Table>
@@ -378,22 +738,58 @@ function App() {
         <tr>
           <td>Hair Products</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Cold and Flu</td>
           <td></td>
-          <td></td>
+          <td>
+            <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
         <td>Pain Medication</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Contraception</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       </tbody>
     </Table>
@@ -415,12 +811,30 @@ function App() {
     <tr>
         <td>Formula</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
       <tr>
         <td>Diapers</td>
         <td></td>
-        <td></td>
+        <td>
+          <Form className='text-center'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+                </Form.Group>
+                <Button size="sm" variant="outline-success" type="submit">
+                Submit
+                </Button>
+            </Form>
+        </td>
       </tr>
     </tbody>
   </Table>
