@@ -2,13 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import MultiStore from '../MultiStorePage';
 
 function BrandNav() {
   return (
     <>
       <Navbar bg="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/search">
             {/* <img
               src="../"
               width="30"
@@ -30,7 +32,9 @@ function BrandNav() {
                 className="me-2"
                 aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="outline-success">
+                    Search
+                </Button>
             </Form>
           </Navbar.Brand>
         </Container>
@@ -38,5 +42,17 @@ function BrandNav() {
     </>
   );
 }
+
+
+
+
+// Route dump 
+// onClick={
+//     <Router>
+//         <Routes>
+//         <Route path="/search" element={<MultiStore/>}/>
+//     </Routes>
+// </Router>
+// }>
 
 export default BrandNav;
