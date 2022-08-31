@@ -1,10 +1,12 @@
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+
 
 
 function Home() {
   return (
-    <div className="Home">
-      <h1 className='text-center'>AisleLand</h1>
+    <div>
+      <Header />
     </div>
   );
 }
