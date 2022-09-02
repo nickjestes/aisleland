@@ -2,10 +2,17 @@ import React from "react";
 import '../styles/Header.css';
 
 
+const styles = {
+    headerStyle: {
+      background: '#F8B77C',
+    },
+  };
 
 function Header() {
     return (
-      <h2>test</h2>
+      <header style={styles.headerStyle} className="header">
+        <h1 className='text-center' style={styles.headingStyle}>AisleLand</h1>
+      </header>
     );
   }
   
