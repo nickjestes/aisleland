@@ -14,7 +14,7 @@ import {useNavigate} from 'react-router-dom';
 function BrandNav() {
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
-      let path = `/results`; 
+      let path = `/search`; 
       navigate(path);
     }
     
