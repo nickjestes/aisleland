@@ -5,41 +5,50 @@ import Form from 'react-bootstrap/Form';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import MultiStore from '../MultiStorePage';
 
-function BrandNav() {
-  return (
-    <>
-      <Navbar bg="dark">
-        <Container>
-          <Navbar.Brand href="/search">
-            {/* <img
-              src="../"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            /> */}
+// Search imports
+import {useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
-            <Form className="d-flex">
-                <Form.Control
-                type="search"
-                placeholder="Enter Store Name"
-                className="me-2"
-                aria-label="Search"
-                />
-                <Form.Control
-                type="search"
-                placeholder="Enter Zip Code"
-                className="me-2"
-                aria-label="Search"
-                />
-                <Button variant="outline-success">
-                    Search
-                </Button>
-            </Form>
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-    </>
+
+
+function BrandNav() {
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+      let path = `/results`; 
+      navigate(path);
+    }
+    
+
+
+
+    const [storeSearch, setStore] = useState("")
+    const [zipSearch, setZip] = useState("")
+    const submitHandle= e=>{
+        e.preventDefault();
+        fetch(`http://localhost:3001/api/stores/${storeSearch}/${zipSearch}`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json"
+            } 
+        }).then(res=>{
+            return res.json()
+        }).then(data=>console.log(data))
+    }
+    
+
+
+    useEffect(()=>{
+        fetch("http://localhost:3001/api/stores/bynamezip").then(res=>res.json()).then(data=>{
+            console.log(data);
+        })
+    },[])
+
+  return (
+    <form onSubmit={submitHandle}>
+    <input name="storeSearch" placeholder="Enter Store Name" value={storeSearch} onChange={e=>setStore(e.target.value)}/>
+    <input name="zipSearch" placeholder="Enter Zip Code" value={zipSearch} onChange={e=>setZip(e.target.value)}/>
+    <button onClick={routeChange}>Search</button>
+</form>
   );
 }
 

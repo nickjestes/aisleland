@@ -3,10 +3,13 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../App.css';
+import GrocComp from "./FoodComponents/GrocComp";
 
 
 
 function StoreTable() {
+  // Query for looping through objects that contain aisle and name
+
   return (
     <div className="StoreTable">
       <h1 className='text-center'>AisleLand</h1>
