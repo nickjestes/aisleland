@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/results" element={<Results/>}/>
-        <Route path="/search" element={<MultiStorePage/>}/>
+        <Route path="/search/:store/:zipCode" element={<MultiStorePage/>}/>
       </Routes>
     </Router>
   );

@@ -18,30 +18,30 @@
         alt="React Bootstrap logo"
       /> */}
 
-      <Form className="d-flex">
-          <Form.Control
-          name="storeSearch"
-          type="search"
-          placeholder="Enter Store Name"
-          className="me-2"
-          aria-label="Search"
-          value={storeSearch}
-          onChange={e=>setStore(e.target.value)}
-          />
-          <Form.Control
-          name="zipSearch"
-          type="search"
-          placeholder="Enter Zip Code"
-          className="me-2"
-          aria-label="Search"
-          value={zipSearch}
-          onChange={e=>setZip(e.target.value)}
-          />
-          <Button variant="outline-success">
-              Search
-          </Button>
-      </Form>
-    </Navbar.Brand>
-  </Container>
-</Navbar>
-</> */}
+//       <Form className="d-flex">
+//           <Form.Control
+//           name="storeSearch"
+//           type="search"
+//           placeholder="Enter Store Name"
+//           className="me-2"
+//           aria-label="Search"
+//           value={storeSearch}
+//           onChange={e=>setStore(e.target.value)}
+//           />
+//           <Form.Control
+//           name="zipSearch"
+//           type="search"
+//           placeholder="Enter Zip Code"
+//           className="me-2"
+//           aria-label="Search"
+//           value={zipSearch}
+//           onChange={e=>setZip(e.target.value)}
+//           />
+//           <Button variant="outline-success">
+//               Search
+//           </Button>
+//       </Form>
+//     </Navbar.Brand>
+//   </Container>
+// </Navbar>
+// </> */}

@@ -13,10 +13,10 @@ import {useNavigate} from 'react-router-dom';
 
 function BrandNav() {
     let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-      let path = `/results`; 
-      navigate(path);
-    }
+    // const routeChange = () =>{ 
+    //   let path = `/search`; 
+    //   navigate(path);
+    // }
     
 
 
@@ -25,29 +25,33 @@ function BrandNav() {
     const [zipSearch, setZip] = useState("")
     const submitHandle= e=>{
         e.preventDefault();
-        fetch(`http://localhost:3001/api/stores/${storeSearch}/${zipSearch}`,{
-            method:"GET",
-            headers:{
-                "Content-Type":"application/json"
-            } 
-        }).then(res=>{
-            return res.json()
-        }).then(data=>console.log(data))
+
+        // fetch(`http://localhost:3001/api/stores/${storeSearch}/${zipSearch}`,{
+        //     method:"GET",
+        //     headers:{
+        //         "Content-Type":"application/json"
+        //     } 
+        // }).then(res=>{
+        //     return res.json()
+        // // }).then(data=>{
+        //     console.log(data)
+            navigate(`/search/${storeSearch}/${zipSearch}`)
+        // })
     }
     
 
 
-    useEffect(()=>{
-        fetch("http://localhost:3001/api/stores/bynamezip").then(res=>res.json()).then(data=>{
-            console.log(data);
-        })
-    },[])
+    // useEffect(()=>{
+    //     fetch("http://localhost:3001/api/stores/bynamezip").then(res=>res.json()).then(data=>{
+    //         console.log(data);
+    //     })
+    // },[])
 
   return (
     <form onSubmit={submitHandle}>
     <input name="storeSearch" placeholder="Enter Store Name" value={storeSearch} onChange={e=>setStore(e.target.value)}/>
     <input name="zipSearch" placeholder="Enter Zip Code" value={zipSearch} onChange={e=>setZip(e.target.value)}/>
-    <button onClick={routeChange}>Search</button>
+    <button>Search</button>
 </form>
   );
 }
