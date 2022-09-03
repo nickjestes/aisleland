@@ -63,7 +63,7 @@ function MultiStoreComp() {
                             <td>
                                 
                             </td>
-                            <button onClick={RessubmitHandle}>Select Store</button>
+                            <a href={`/results/${storeEntry.id}`}><button>Select Store</button></a>
                         </tr>
                 </Table>
             ))

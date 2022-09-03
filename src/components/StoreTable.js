@@ -14,9 +14,12 @@ function StoreTable() {
 
   const {id} = useParams()
   const [foodItems, setFoods] = useState()
+  const [houseItems, setHouseItems] = useState ()
 
 
   console.log(id)
+
+  // Food fetch
   useEffect(()=>{
     fetch(`http://localhost:3001/api/foods/${id}`,{
     method:"GET",
@@ -31,6 +34,7 @@ function StoreTable() {
   })
   },[])
 
+  // houseItem Fetch
   useEffect(()=>{
     fetch(`http://localhost:3001/api/households/${id}`,{
     method:"GET",
@@ -41,6 +45,7 @@ function StoreTable() {
     return res.json()
   }).then(data=>{
     console.log(data)
+    setHouseItems(data)
   })
   },[])
 
@@ -68,7 +73,7 @@ function StoreTable() {
       <tbody>
         <tr>
           <td>Bread</td>
-          <td></td>
+          <td>{foodItems?.find(breadItem=>(breadItem.typeName.toLowerCase()==="bread"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
