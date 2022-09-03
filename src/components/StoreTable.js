@@ -3,12 +3,55 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../App.css';
-import GrocComp from "./FoodComponents/GrocComp";
+import { useParams } from "react-router-dom";
+
+import {useEffect, useState} from 'react';
 
 
 
 function StoreTable() {
   // Query for looping through objects that contain aisle and name
+
+  const {id} = useParams()
+  const [foodItems, setFoods] = useState()
+  const [houseItems, setHouseItems] = useState ()
+
+
+  console.log(id)
+
+  // Food fetch
+  useEffect(()=>{
+    fetch(`http://localhost:3001/api/foods/${id}`,{
+    method:"GET",
+    headers:{
+        "Content-Type":"application/json"
+    } 
+  }).then(res=>{
+    return res.json()
+  }).then(data=>{
+    console.log(data)
+    setFoods(data)
+  })
+  },[])
+
+  // houseItem Fetch
+  useEffect(()=>{
+    fetch(`http://localhost:3001/api/households/${id}`,{
+    method:"GET",
+    headers:{
+        "Content-Type":"application/json"
+    } 
+  }).then(res=>{
+    return res.json()
+  }).then(data=>{
+    console.log(data)
+    setHouseItems(data)
+  })
+  },[])
+
+
+
+
 
   return (
     <div className="StoreTable">
@@ -30,7 +73,7 @@ function StoreTable() {
       <tbody>
         <tr>
           <td>Bread</td>
-          <td></td>
+          <td>{foodItems?.find(breadItem=>(breadItem.typeName.toLowerCase()==="bread"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
