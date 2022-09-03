@@ -3,12 +3,50 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../App.css';
-import GrocComp from "./FoodComponents/GrocComp";
+import { useParams } from "react-router-dom";
+
+import {useEffect, useState} from 'react';
 
 
 
 function StoreTable() {
   // Query for looping through objects that contain aisle and name
+
+  const {id} = useParams()
+  const [foodItems, setFoods] = useState()
+
+
+  console.log(id)
+  useEffect(()=>{
+    fetch(`http://localhost:3001/api/foods/${id}`,{
+    method:"GET",
+    headers:{
+        "Content-Type":"application/json"
+    } 
+  }).then(res=>{
+    return res.json()
+  }).then(data=>{
+    console.log(data)
+    setFoods(data)
+  })
+  },[])
+
+  useEffect(()=>{
+    fetch(`http://localhost:3001/api/households/${id}`,{
+    method:"GET",
+    headers:{
+        "Content-Type":"application/json"
+    } 
+  }).then(res=>{
+    return res.json()
+  }).then(data=>{
+    console.log(data)
+  })
+  },[])
+
+
+
+
 
   return (
     <div className="StoreTable">
