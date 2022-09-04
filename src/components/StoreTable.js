@@ -87,7 +87,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Cereal</td>
-          <td></td>
+          <td>{foodItems?.find(cerealItem=>(cerealItem.typeName.toLowerCase()==="cereal"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -101,7 +101,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Granola Bars</td>
-          <td></td>
+          <td>{foodItems?.find(GranolaBarIteam=>(GranolaBarIteam.typeName.toLowerCase()==="granola bars"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -115,7 +115,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Pasta</td>
-          <td></td>
+          <td>{foodItems?.find(pastaIteam=>(pastaIteam.typeName.toLowerCase()==="pasta"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -129,7 +129,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Jams</td>
-          <td></td>
+          <td>{foodItems?.find(jamItem=>(jamItem.typeName.toLowerCase()==="jams"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -143,7 +143,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Coffee</td>
-          <td></td>
+          <td>{foodItems?.find(coffeeItem=>(coffeeItem.typeName.toLowerCase()==="coffee"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -157,7 +157,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Tea</td>
-          <td></td>
+          <td>{foodItems?.find(teaItem=>(teaItem.typeName.toLowerCase()==="tea"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -171,7 +171,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Baking</td>
-          <td></td>
+          <td>{foodItems?.find(bakingItem=>(bakingItem.typeName.toLowerCase()==="baking"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -185,12 +185,12 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Bulk Foods</td>
-          <td></td>
+          <td>{foodItems?.find(bulkItem=>(bulkItem.typeName.toLowerCase()==="bulk foods"))?.aisleLocation}</td>
           <td></td>
         </tr>
         <tr>
           <td>Chips</td>
-          <td></td>
+          <td>{foodItems?.find(chipsItem=>(chipsItem.typeName.toLowerCase()==="chips"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -204,12 +204,12 @@ function StoreTable() {
         </tr>
       <tr>
           <td>Rice</td>
-          <td></td>
+          <td>{foodItems?.find(riceItem=>(riceItem.typeName.toLowerCase()==="rice"))?.aisleLocation}</td>
           <td></td>
         </tr>
         <tr>
           <td>Condiments</td>
-          <td></td>
+          <td>{foodItems?.find(condimentsItem=>(condimentsItem.typeName.toLowerCase()==="condiments"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -223,7 +223,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Salad Dressing</td>
-          <td></td>
+          <td>{foodItems?.find(saladItem=>(saladItem.typeName.toLowerCase()==="salad dressing"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -237,7 +237,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Eggs</td>
-          <td></td>
+          <td>{foodItems?.find(eggsItem=>(eggsItem.typeName.toLowerCase()==="eggs"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -251,7 +251,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Juice</td>
-          <td></td>
+          <td>{foodItems?.find(juiceItem=>(juiceItem.typeName.toLowerCase()==="juice"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -265,7 +265,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Butter</td>
-          <td></td>
+          <td>{foodItems?.find(butterItem=>(butterItem.typeName.toLowerCase()==="butter"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -279,7 +279,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Milk</td>
-          <td></td>
+          <td>{foodItems?.find(milkItem=>(milkItem.typeName.toLowerCase()==="milk"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -293,7 +293,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Creamer</td>
-          <td></td>
+          <td>{foodItems?.find(creamerItem=>(creamerItem.typeName.toLowerCase()==="creamer"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -307,7 +307,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Cheese</td>
-          <td></td>
+          <td>{foodItems?.find(cheeseItem=>(cheeseItem.typeName.toLowerCase()==="cheese"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -336,8 +336,8 @@ function StoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Bread</td>
-          <td></td>
+          <td>Pizza</td>
+          <td>{foodItems?.find(pizzaIteam=>(pizzaIteam.typeName.toLowerCase()==="frozen pizza"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -350,8 +350,8 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Cereal</td>
-          <td></td>
+          <td>Single Meals</td>
+          <td>{foodItems?.find(singelMealsItem=>(singelMealsItem.typeName.toLowerCase()==="frozen single meals"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -364,8 +364,8 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Granola Bars</td>
-          <td></td>
+          <td>Burritos</td>
+          <td>{foodItems?.find(burritoItem=>(burritoItem.typeName.toLowerCase()==="frozen burritos"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -378,8 +378,8 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Pasta</td>
-          <td></td>
+          <td>Family Meals</td>
+          <td>{foodItems?.find(familyMealsItem=>(familyMealsItem.typeName.toLowerCase()==="frozen family meals"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -392,8 +392,8 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Jams</td>
-          <td></td>
+          <td>Vegetables</td>
+          <td>{foodItems?.find(vegetableItems=>(vegetableItems.typeName.toLowerCase()==="frozen vegetables"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -406,78 +406,8 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Coffee</td>
-          <td></td>
-          <td>
-            <Form className='text-center'>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
-              </Form.Group>
-              <Button size="sm" variant="outline-success" type="submit">
-               Submit
-              </Button>
-            </Form>
-          </td>
-        </tr>
-        <tr>
-          <td>Tea</td>
-          <td></td>
-          <td>
-            <Form className='text-center'>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
-              </Form.Group>
-              <Button size="sm" variant="outline-success" type="submit">
-               Submit
-              </Button>
-            </Form>
-          </td>
-        </tr>
-        <tr>
-          <td>Baking</td>
-          <td></td>
-          <td>
-            <Form className='text-center'>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
-              </Form.Group>
-              <Button size="sm" variant="outline-success" type="submit">
-               Submit
-              </Button>
-            </Form>
-          </td>
-        </tr>
-        <tr>
-          <td>Bulk Foods</td>
-          <td></td>
-          <td>
-            <Form className='text-center'>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
-              </Form.Group>
-              <Button size="sm" variant="outline-success" type="submit">
-               Submit
-              </Button>
-            </Form>
-          </td>
-        </tr>
-        <tr>
-          <td>Chips</td>
-          <td></td>
-          <td>
-           <Form className='text-center'>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
-              </Form.Group>
-              <Button size="sm" variant="outline-success" type="submit">
-               Submit
-              </Button>
-            </Form>
-          </td>
-        </tr>
-      <tr>
-          <td>Rice</td>
-          <td></td>
+          <td>Meats</td>
+          <td>{foodItems?.find(meatItem=>(meatItem.typeName.toLowerCase()==="frozen meats"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -506,8 +436,8 @@ function StoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Tomatos</td>
-          <td></td>
+          <td>Tomatoes</td>
+          <td>{foodItems?.find(tomatosItem=>(tomatosItem.typeName.toLowerCase()==="canned tomatoes"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -521,7 +451,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Beans</td>
-          <td></td>
+          <td>{foodItems?.find(beansItem=>(beansItem.typeName.toLowerCase()==="canned beans"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -535,7 +465,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Peas</td>
-          <td></td>
+          <td>{foodItems?.find(peasItem=>(peasItem.typeName.toLowerCase()==="canned peas"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -549,7 +479,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Peaches</td>
-          <td></td>
+          <td>{foodItems?.find(peachesItem=>(peachesItem.typeName.toLowerCase()==="canned peaches"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -563,7 +493,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Tuna</td>
-          <td></td>
+          <td>{foodItems?.find(tunaItems=>(tunaItems.typeName.toLowerCase()==="canned tuna"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -577,7 +507,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Chili</td>
-          <td></td>
+          <td>{foodItems?.find(chiliItem=>(chiliItem.typeName.toLowerCase()==="canned chili"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -591,7 +521,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Soup</td>
-          <td></td>
+          <td>{foodItems?.find(soupItem=>(soupItem.typeName.toLowerCase()==="canned soup"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -628,7 +558,7 @@ function StoreTable() {
     <tbody>
       <tr>
         <td>Paper Towels</td>
-        <td></td>
+        <td>{houseItems?.find(papertowelItem=>(papertowelItem.typeName.toLowerCase()==="paper towels"))?.aisleLocation}</td>
         <td>
          <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -642,7 +572,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Napkins</td>
-        <td></td>
+        <td>{houseItems?.find(napkinItem=>(napkinItem.typeName.toLowerCase()==="napkins"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -656,7 +586,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Rubber Gloves</td>
-        <td></td>
+        <td>{houseItems?.find(rubbergloveItem=>(rubbergloveItem.typeName.toLowerCase()==="rubber gloves"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -670,7 +600,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Sponges</td>
-        <td></td>
+        <td>{houseItems?.find(spongeItem=>(spongeItem.typeName.toLowerCase()==="sponges"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -684,7 +614,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Detergent</td>
-        <td></td>
+        <td>{houseItems?.find(detergentItem=>(detergentItem.typeName.toLowerCase()==="detergent"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -698,7 +628,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Fabric Softener</td>
-        <td></td>
+        <td>{houseItems?.find(fabricItem=>(fabricItem.typeName.toLowerCase()==="fabric softener"))?.aisleLocation}</td>
         <td>
          <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -712,7 +642,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Cleaners</td>
-        <td></td>
+        <td>{houseItems?.find(cleanerItem=>(cleanerItem.typeName.toLowerCase()==="cleaners"))?.aisleLocation}</td>
         <td>
          <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -726,7 +656,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Garbage Bags</td>
-        <td></td>
+        <td>{houseItems?.find(garbageItem=>(garbageItem.typeName.toLowerCase()==="garbage bags"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -740,7 +670,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Toilet Paper</td>
-        <td></td>
+        <td>{houseItems?.find(toiletPaperItem=>(toiletPaperItem.typeName.toLowerCase()==="toilet paper"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -754,7 +684,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Brooms and Mops</td>
-        <td></td>
+        <td>{houseItems?.find(broomsItem=>(broomsItem.typeName.toLowerCase()==="brooms and mops"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -784,7 +714,7 @@ function StoreTable() {
       <tbody>
         <tr>
           <td>Hair Products</td>
-          <td></td>
+          <td>{houseItems?.find(hairsItems=>(hairsItems.typeName.toLowerCase()==="hair products"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -798,7 +728,7 @@ function StoreTable() {
         </tr>
         <tr>
           <td>Cold and Flu</td>
-          <td></td>
+          <td>{houseItems?.find(coldItems=>(coldItems.typeName.toLowerCase()==="cold and flu"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -812,7 +742,7 @@ function StoreTable() {
         </tr>
         <tr>
         <td>Pain Medication</td>
-        <td></td>
+        <td>{houseItems?.find(painItem=>(painItem.typeName.toLowerCase()==="pain medication"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -826,7 +756,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Contraception</td>
-        <td></td>
+        <td>{houseItems?.find(contraceptionItem=>(contraceptionItem.typeName.toLowerCase()==="contraception"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -857,7 +787,7 @@ function StoreTable() {
     <tbody>
     <tr>
         <td>Formula</td>
-        <td></td>
+        <td>{houseItems?.find(formulaItem=>(formulaItem.typeName.toLowerCase()==="baby formula"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -871,7 +801,7 @@ function StoreTable() {
       </tr>
       <tr>
         <td>Diapers</td>
-        <td></td>
+        <td>{houseItems?.find(diapersItem=>(diapersItem.typeName.toLowerCase()==="baby diapers"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
