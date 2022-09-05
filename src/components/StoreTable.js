@@ -13,8 +13,8 @@ function StoreTable() {
   // Query for looping through objects that contain aisle and name
 
   const {id} = useParams()
-  const [foodItems, setFoods] = useState()
-  const [houseItems, setHouseItems] = useState ()
+  const [foodItems, setFoods] = useState([])
+  const [houseItems, setHouseItems] = useState ([])
   const URL_PREFIX= "http://localhost:3001"
 
   console.log(id)
@@ -49,7 +49,30 @@ function StoreTable() {
   })
   },[])
 
-
+  const updateAisle = (e) =>{
+    e.preventDefault()
+    const foodID = e.target.getAttribute("id")
+    fetch(`${URL_PREFIX}/api/foods/${foodID}`,{
+      method:"PUT",
+      body:JSON.stringify({
+        aisleLocation: e.target.children[0].children[0].value,
+      }),
+      headers:{
+          "Content-Type":"application/json"
+      } 
+    }).then(res=>{
+      return res.json()
+    }).then(data=>{
+      console.log(data)
+      const newFood = foodItems.map(item=>{
+        if (item._id == foodID){
+          return data
+        }
+        return item
+      })
+      setFoods(newFood)
+    })
+  }
 
 
 
@@ -72,10 +95,10 @@ function StoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Bread</td>
+          <td>Bread<img src={require("../icons/foodIcons/icons8-bread-48.png")}></img></td>
           <td>{foodItems?.find(breadItem=>(breadItem.typeName.toLowerCase()==="bread"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(breadItem=>(breadItem.typeName.toLowerCase()==="bread"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
