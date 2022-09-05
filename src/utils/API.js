@@ -10,14 +10,14 @@ const API = {
         })
     },
     checkToken:token=>{
-        return fetch(`${URL_PREFIX}/users/check-token`,{
+        return fetch(`${URL_PREFIX}/api/users/check-token`,{
             headers:{
               Authorization:`Bearer ${token}`
             }
          })
     },
     login: (email,password)=>{
-        return fetch(`${URL_PREFIX}/users/login`,{
+        return fetch(`${URL_PREFIX}/api/users/login`,{
         method:"POST",
         body:JSON.stringify({
           email,

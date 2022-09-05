@@ -92,7 +92,7 @@ function App() {
     <Router>
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/login" element={<Login/>}/>
+      <Route path="/login" element={<Login userId={user.id} handleLogin = {submitLoginHandle} handleSignup={submitSignupHandle}/>}/>
       <Route path="/results/:id" element={<Results/>}/>
       <Route path="/search/:store/:zipCode" element={<MultiStorePage/>}/>
     </Routes>
