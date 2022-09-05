@@ -15,13 +15,13 @@ function StoreTable() {
   const {id} = useParams()
   const [foodItems, setFoods] = useState()
   const [houseItems, setHouseItems] = useState ()
-
+  const URL_PREFIX= "http://localhost:3001"
 
   console.log(id)
 
   // Food fetch
   useEffect(()=>{
-    fetch(`http://localhost:3001/api/foods/${id}`,{
+    fetch(`${URL_PREFIX}/api/foods/${id}`,{
     method:"GET",
     headers:{
         "Content-Type":"application/json"
@@ -36,7 +36,7 @@ function StoreTable() {
 
   // houseItem Fetch
   useEffect(()=>{
-    fetch(`http://localhost:3001/api/households/${id}`,{
+    fetch(`${URL_PREFIX}/api/households/${id}`,{
     method:"GET",
     headers:{
         "Content-Type":"application/json"
