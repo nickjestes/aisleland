@@ -1,0 +1,50 @@
+const URL_PREFIX= "http://localhost:3001"
+
+const API = {
+    multiStoreAPI:(store,zipCode)=>{
+        return fetch(`http://localhost:3001/api/stores/${store}/${zipCode}`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+    },
+    checkToken:token=>{
+        return fetch(`${URL_PREFIX}/users/check-token`,{
+            headers:{
+              Authorization:`Bearer ${token}`
+            }
+         })
+    },
+    login: (email,password)=>{
+        return fetch(`${URL_PREFIX}/users/login`,{
+        method:"POST",
+        body:JSON.stringify({
+          email,
+          password
+        }),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    })
+    },
+    signup: (email,password)=>{
+        return fetch(`${URL_PREFIX}/users/signup`,{
+        method:"POST",
+        body:JSON.stringify({
+          email,
+          password
+        }),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    })
+    },
+    getUserById:userId=>{
+      return fetch(`${URL_PREFIX}/users/${userId}`)
+    },
+  
+}
+
+
+export default API

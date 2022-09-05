@@ -5,17 +5,20 @@ import Table from 'react-bootstrap/Table';
 import {useNavigate} from 'react-router-dom';
 
 
+
 function MultiStoreComp() {
     const {store, zipCode} = useParams()
     const [storesList, setStores] = useState(null)
     const [storeID, setStoreID] = useState()
+    const URL_PREFIX= "http://localhost:3001"
+
 
     let navigate = useNavigate(); 
 
 
     console.log(store, zipCode)
     useEffect(()=>{
-            fetch(`http://localhost:3001/api/stores/${store}/${zipCode}`,{
+            fetch(`${URL_PREFIX}/api/stores/${store}/${zipCode}`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json"
