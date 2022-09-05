@@ -5,33 +5,26 @@
 import Results from './Results';
 import Home from './Home';
 import MultiStorePage from './MultiStorePage';
+import Login from './Login';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import {useEffect,useState} from "react"
+import API from "./utils/API"
 
 
 function App() {
-
-
-  
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
   const [user, setUser] = useState({
-  id:0,
-  email:''
+    id:0,
+    email:''
   })
   const [token, setToken] = useState("")
 
   useEffect(()=>{
     const storedToken = localStorage.getItem("token");
-    fetch("http://localhost:3001/check-token",{
-      headers:{
-        Authorization:`Bearer ${storedToken}`
-      }
-    }).then(res=>{
+    API.checkToken(storedToken).then(res=>{
       if(!res.ok){
-      console.log("invalid token!")
-      localStorage.removeItem("token")
+       console.log("invalid token!")
+       localStorage.removeItem("token")
       }
       else {
         console.log("valid token")
@@ -45,20 +38,35 @@ function App() {
       }
     })
   },[])
-
-  const submitHandleLogin= e=>{
-    e.preventDefault();
-    fetch("http://localhost:3001/login",{
-        method:"POST",
-        body:JSON.stringify({
-          email,
-          password
-        }),
-        headers:{
-            "Content-Type":"application/json"
-        }
-    }).then(res=>{
-      return res.json()
+ 
+  const submitLoginHandle= (email,password)=>{
+    API.login(email,password).then(res=>{
+      if(!res.ok){
+        setUser({userId:0,email:""});
+        setToken("")
+        return;
+      }
+       return res.json()
+    }).then(data=>{
+      console.log(data)
+      setUser({
+        id:data.user.id,
+        email:data.user.email
+      })
+      setToken(data.token)
+      localStorage.setItem("token",data.token)
+     
+    })
+  }
+ 
+  const submitSignupHandle= (email,password)=>{
+    API.signup(email,password).then(res=>{
+      if(!res.ok){
+        setUser({userId:0,email:""});
+        setToken("")
+        return;
+      }
+       return res.json()
     }).then(data=>{
       console.log(data)
       setUser({
@@ -68,13 +76,23 @@ function App() {
       setToken(data.token)
       localStorage.setItem("token",data.token)
     })
-    }
+  }
+
+  const logoutClick = ()=>{
+    localStorage.removeItem("token");
+    setUser({
+      id:0,
+      email:''
+    })
+    setToken("")
+  }
 
   
   return (
     <Router>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route path="/results/:id" element={<Results/>}/>
       <Route path="/search/:store/:zipCode" element={<MultiStorePage/>}/>
     </Routes>
