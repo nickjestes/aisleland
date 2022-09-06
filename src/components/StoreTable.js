@@ -109,7 +109,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Cereal</td>
+          <td>Cereal<img src={require("../icons/foodIcons/icons8-cereal-48.png")}></img></td>
           <td>{foodItems?.find(cerealItem=>(cerealItem.typeName.toLowerCase()==="cereal"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -137,7 +137,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Pasta</td>
+          <td>Pasta<img src={require("../icons/foodIcons/icons8-spaghetti-48.png")}></img></td>
           <td>{foodItems?.find(pastaIteam=>(pastaIteam.typeName.toLowerCase()==="pasta"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -151,7 +151,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Jams</td>
+          <td>Jams<img src={require("../icons/foodIcons/icons8-bread-48.png")}></img></td>
           <td>{foodItems?.find(jamItem=>(jamItem.typeName.toLowerCase()==="jams"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -165,7 +165,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Coffee</td>
+          <td>Coffee<img src={require("../icons/foodIcons/icons8-coffee-pot-48.png")}></img></td>
           <td>{foodItems?.find(coffeeItem=>(coffeeItem.typeName.toLowerCase()==="coffee"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -179,7 +179,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Tea</td>
+          <td>Tea<img src={require("../icons/foodIcons/icons8-teapot-48.png")}></img></td>
           <td>{foodItems?.find(teaItem=>(teaItem.typeName.toLowerCase()==="tea"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -193,7 +193,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Baking</td>
+          <td>Baking<img src={require("../icons/foodIcons/icons8-bake-48.png")}></img></td>
           <td>{foodItems?.find(bakingItem=>(bakingItem.typeName.toLowerCase()==="baking"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -207,12 +207,12 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Bulk Foods</td>
+          <td>Bulk Foods<img src={require("../icons/foodIcons/icons8-bulk-food-48.png")}></img></td>
           <td>{foodItems?.find(bulkItem=>(bulkItem.typeName.toLowerCase()==="bulk foods"))?.aisleLocation}</td>
           <td></td>
         </tr>
         <tr>
-          <td>Chips</td>
+          <td>Chips<img src={require("../icons/foodIcons/icons8-nachos-48.png")}></img></td>
           <td>{foodItems?.find(chipsItem=>(chipsItem.typeName.toLowerCase()==="chips"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -226,12 +226,12 @@ function StoreTable() {
           </td>
         </tr>
       <tr>
-          <td>Rice</td>
+          <td>Rice<img src={require("../icons/foodIcons/icons8-rice-bowl-48.png")}></img></td>
           <td>{foodItems?.find(riceItem=>(riceItem.typeName.toLowerCase()==="rice"))?.aisleLocation}</td>
           <td></td>
         </tr>
         <tr>
-          <td>Condiments</td>
+          <td>Condiments<img src={require("../icons/foodIcons/icons8-mustard-48.png")}></img></td>
           <td>{foodItems?.find(condimentsItem=>(condimentsItem.typeName.toLowerCase()==="condiments"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -259,7 +259,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Eggs</td>
+          <td>Eggs<img src={require("../icons/foodIcons/icons8-egg-carton-48.png")}></img></td>
           <td>{foodItems?.find(eggsItem=>(eggsItem.typeName.toLowerCase()==="eggs"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -273,7 +273,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Juice</td>
+          <td>Juice<img src={require("../icons/foodIcons/icons8-lemonade-48.png")}></img></td>
           <td>{foodItems?.find(juiceItem=>(juiceItem.typeName.toLowerCase()==="juice"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -287,7 +287,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Butter</td>
+          <td>Butter<img src={require("../icons/foodIcons/icons8-butter-48.png")}></img></td>
           <td>{foodItems?.find(butterItem=>(butterItem.typeName.toLowerCase()==="butter"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -301,7 +301,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Milk</td>
+          <td>Milk<img src={require("../icons/foodIcons/icons8-milk-48.png")}></img></td>
           <td>{foodItems?.find(milkItem=>(milkItem.typeName.toLowerCase()==="milk"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -315,7 +315,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Creamer</td>
+          <td>Creamer<img src={require("../icons/foodIcons/icons8-creamer-48.png")}></img></td>
           <td>{foodItems?.find(creamerItem=>(creamerItem.typeName.toLowerCase()==="creamer"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -329,7 +329,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Cheese</td>
+          <td>Cheese<img src={require("../icons/foodIcons/icons8-cheese-48.png")}></img></td>
           <td>{foodItems?.find(cheeseItem=>(cheeseItem.typeName.toLowerCase()==="cheese"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -359,7 +359,7 @@ function StoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Pizza</td>
+          <td>Pizza<img src={require("../icons/foodIcons/icons8-pizza-48.png")}></img></td>
           <td>{foodItems?.find(pizzaIteam=>(pizzaIteam.typeName.toLowerCase()==="frozen pizza"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -373,7 +373,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Single Meals</td>
+          <td>Single Meals<img src={require("../icons/foodIcons/icons8-meal-48.png")}></img></td>
           <td>{foodItems?.find(singelMealsItem=>(singelMealsItem.typeName.toLowerCase()==="frozen single meals"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -401,7 +401,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Family Meals</td>
+          <td>Family Meals<img src={require("../icons/foodIcons/icons8-family-48.png")}></img></td>
           <td>{foodItems?.find(familyMealsItem=>(familyMealsItem.typeName.toLowerCase()==="frozen family meals"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -415,7 +415,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Vegetables</td>
+          <td>Vegetables<img src={require("../icons/foodIcons/icons8-broccolini-48.png")}></img></td>
           <td>{foodItems?.find(vegetableItems=>(vegetableItems.typeName.toLowerCase()==="frozen vegetables"))?.aisleLocation}</td>
           <td>
            <Form className='text-center'>
@@ -459,7 +459,7 @@ function StoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Tomatoes</td>
+          <td>Tomatoes<img src={require("../icons/foodIcons/icons8-tomatoes-48.png")}></img></td>
           <td>{foodItems?.find(tomatosItem=>(tomatosItem.typeName.toLowerCase()==="canned tomatoes"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -473,7 +473,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Beans</td>
+          <td>Beans<img src={require("../icons/foodIcons/icons8-white-beans-48.png")}></img></td>
           <td>{foodItems?.find(beansItem=>(beansItem.typeName.toLowerCase()==="canned beans"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -487,7 +487,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Peas</td>
+          <td>Peas<img src={require("../icons/foodIcons/icons8-peas-48.png")}></img></td>
           <td>{foodItems?.find(peasItem=>(peasItem.typeName.toLowerCase()==="canned peas"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -501,7 +501,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Peaches</td>
+          <td>Peaches<img src={require("../icons/foodIcons/icons8-peach-48.png")}></img></td>
           <td>{foodItems?.find(peachesItem=>(peachesItem.typeName.toLowerCase()==="canned peaches"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -515,7 +515,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Tuna</td>
+          <td>Tuna<img src={require("../icons/foodIcons/icons8-tuna-48.png")}></img></td>
           <td>{foodItems?.find(tunaItems=>(tunaItems.typeName.toLowerCase()==="canned tuna"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -529,7 +529,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Chili</td>
+          <td>Chili<img src={require("../icons/foodIcons/icons8-chili-pepper-48.png")}></img></td>
           <td>{foodItems?.find(chiliItem=>(chiliItem.typeName.toLowerCase()==="canned chili"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -543,7 +543,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Soup</td>
+          <td>Soup<img src={require("../icons/foodIcons/icons8-soup-plate-48.png")}></img></td>
           <td>{foodItems?.find(soupItem=>(soupItem.typeName.toLowerCase()==="canned soup"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -580,7 +580,7 @@ function StoreTable() {
     </thead>
     <tbody>
       <tr>
-        <td>Paper Towels</td>
+        <td>Paper Towels<img src={require("../icons/houseIcons/icons8-wipes-48.png")}></img></td>
         <td>{houseItems?.find(papertowelItem=>(papertowelItem.typeName.toLowerCase()==="paper towels"))?.aisleLocation}</td>
         <td>
          <Form className='text-center'>
@@ -594,7 +594,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Napkins</td>
+        <td>Napkins<img src={require("../icons/houseIcons/icons8-wipes-48.png")}></img></td>
         <td>{houseItems?.find(napkinItem=>(napkinItem.typeName.toLowerCase()==="napkins"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -608,7 +608,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Rubber Gloves</td>
+        <td>Rubber Gloves<img src={require("../icons/houseIcons/icons8-rubber-gloves-48.png")}></img></td>
         <td>{houseItems?.find(rubbergloveItem=>(rubbergloveItem.typeName.toLowerCase()==="rubber gloves"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -622,7 +622,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Sponges</td>
+        <td>Sponges<img src={require("../icons/houseIcons/icons8-absorb-48.png")}></img></td>
         <td>{houseItems?.find(spongeItem=>(spongeItem.typeName.toLowerCase()==="sponges"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -636,7 +636,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Detergent</td>
+        <td>Detergent<img src={require("../icons/houseIcons/icons8-wash-by-hand-48.png")}></img></td>
         <td>{houseItems?.find(detergentItem=>(detergentItem.typeName.toLowerCase()==="detergent"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -650,7 +650,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Fabric Softener</td>
+        <td>Fabric Softener<img src={require("../icons/houseIcons/icons8-wash-by-hand-48.png")}></img></td>
         <td>{houseItems?.find(fabricItem=>(fabricItem.typeName.toLowerCase()==="fabric softener"))?.aisleLocation}</td>
         <td>
          <Form className='text-center'>
@@ -664,7 +664,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Cleaners</td>
+        <td>Cleaners<img src={require("../icons/houseIcons/icons8-spray-48.png")}></img></td>
         <td>{houseItems?.find(cleanerItem=>(cleanerItem.typeName.toLowerCase()==="cleaners"))?.aisleLocation}</td>
         <td>
          <Form className='text-center'>
@@ -678,7 +678,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Garbage Bags</td>
+        <td>Garbage Bags<img src={require("../icons/houseIcons/icons8-trash-can-48.png")}></img></td>
         <td>{houseItems?.find(garbageItem=>(garbageItem.typeName.toLowerCase()==="garbage bags"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -692,7 +692,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Toilet Paper</td>
+        <td>Toilet Paper<img src={require("../icons/houseIcons/icons8-toilet-paper-48.png")}></img></td>
         <td>{houseItems?.find(toiletPaperItem=>(toiletPaperItem.typeName.toLowerCase()==="toilet paper"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -706,7 +706,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Brooms and Mops</td>
+        <td>Brooms and Mops<img src={require("../icons/houseIcons/icons8-housekeeping-48.png")}></img></td>
         <td>{houseItems?.find(broomsItem=>(broomsItem.typeName.toLowerCase()==="brooms and mops"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -736,7 +736,7 @@ function StoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Hair Products</td>
+          <td>Hair Products<img src={require("../icons/houseIcons/icons8-hair-brush-48.png")}></img></td>
           <td>{houseItems?.find(hairsItems=>(hairsItems.typeName.toLowerCase()==="hair products"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -750,7 +750,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Cold and Flu</td>
+          <td>Cold and Flu<img src={require("../icons/houseIcons/icons8-virus-48.png")}></img></td>
           <td>{houseItems?.find(coldItems=>(coldItems.typeName.toLowerCase()==="cold and flu"))?.aisleLocation}</td>
           <td>
             <Form className='text-center'>
@@ -764,7 +764,7 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-        <td>Pain Medication</td>
+        <td>Pain Medication<img src={require("../icons/houseIcons/icons8-pill-48.png")}></img></td>
         <td>{houseItems?.find(painItem=>(painItem.typeName.toLowerCase()==="pain medication"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -778,7 +778,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Contraception</td>
+        <td>Contraception<img src={require("../icons/houseIcons/icons8-pregnancy-test-48.png")}></img></td>
         <td>{houseItems?.find(contraceptionItem=>(contraceptionItem.typeName.toLowerCase()==="contraception"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -809,7 +809,7 @@ function StoreTable() {
     </thead>
     <tbody>
     <tr>
-        <td>Formula</td>
+        <td>Formula<img src={require("../icons/houseIcons/icons8-baby-bottle-48.png")}></img></td>
         <td>{houseItems?.find(formulaItem=>(formulaItem.typeName.toLowerCase()==="baby formula"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
@@ -823,7 +823,7 @@ function StoreTable() {
         </td>
       </tr>
       <tr>
-        <td>Diapers</td>
+        <td>Diapers<img src={require("../icons/houseIcons/icons8-nappy-48.png")}></img></td>
         <td>{houseItems?.find(diapersItem=>(diapersItem.typeName.toLowerCase()==="baby diapers"))?.aisleLocation}</td>
         <td>
           <Form className='text-center'>
