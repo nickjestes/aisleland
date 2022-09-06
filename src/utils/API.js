@@ -29,7 +29,7 @@ const API = {
     })
     },
     signup: (email,password)=>{
-        return fetch(`${URL_PREFIX}/users/signup`,{
+        return fetch(`${URL_PREFIX}/users`,{
         method:"POST",
         body:JSON.stringify({
           email,

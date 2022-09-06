@@ -7,7 +7,6 @@ export default function Login(props) {
     <div className="Login">
         <AuthForm type="Login" handleSubmit = {props.handleLogin}/>
         <AuthForm type="Signup" handleSubmit = {props.handleSignup}/>
-
       </div>
   )
 }
