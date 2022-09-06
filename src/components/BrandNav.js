@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form';
 // Search imports
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 
@@ -51,8 +52,10 @@ function BrandNav() {
     <form onSubmit={submitHandle}>
     <input name="storeSearch" placeholder="Enter Store Name" value={storeSearch} onChange={e=>setStore(e.target.value)}/>
     <input name="zipSearch" placeholder="Enter Zip Code" value={zipSearch} onChange={e=>setZip(e.target.value)}/>
-    <button>Search</button>
-</form>
+    <button>Search</button>  
+    <Link to="/login"><button>Login!</button></Link>
+  </form>
+
   );
 }
 

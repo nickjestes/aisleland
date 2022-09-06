@@ -2,14 +2,17 @@ import React from "react";
 import Header from "./components/Header";
 import BrandNav from "./components/BrandNav";
 import Login from "./Login";
+import NewStorePOST from "./components/NewStorePOST";
 
 
 function Home() {
   return (
     <div>
       <Header />
-      {/* <Login /> */}
       <BrandNav />
+        {/* <Login /> */}
+      <NewStorePOST />
+
     </div>
   );
 }

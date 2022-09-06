@@ -18,6 +18,7 @@ export default function AuthForm(props) {
             <input value={password} placeholder="Enter Password" type="password" onChange={e=>setPassword(e.target.value)}/>
             {/* <input value={userName} placeholder="Enter Username" onChange={e=>setUserName(e.target.value)}/> */}
             <Link to="/"><button>{props.type}</button></Link>
+            <Link to="/"><button>Home!</button></Link>
         </form>
     </div>
   )

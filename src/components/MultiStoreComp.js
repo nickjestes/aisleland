@@ -10,7 +10,7 @@ function MultiStoreComp() {
     const {store, zipCode} = useParams()
     const [storesList, setStores] = useState(null)
     const [storeID, setStoreID] = useState()
-    const URL_PREFIX= "http://localhost:3001"
+    const URL_PREFIX= "https://aisleland-backend.herokuapp.com"
 
 
     let navigate = useNavigate(); 
