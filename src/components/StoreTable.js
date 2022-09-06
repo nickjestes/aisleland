@@ -15,7 +15,7 @@ function StoreTable() {
   const {id} = useParams()
   const [foodItems, setFoods] = useState([])
   const [houseItems, setHouseItems] = useState ([])
-  const URL_PREFIX= "http://localhost:3001"
+  const URL_PREFIX= "https://aisleland-backend.herokuapp.com"
 
   console.log(id)
 

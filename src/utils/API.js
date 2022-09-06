@@ -1,8 +1,8 @@
-const URL_PREFIX= "http://localhost:3001"
+const URL_PREFIX= "https://aisleland-backend.herokuapp.com"
 
 const API = {
     multiStoreAPI:(store,zipCode)=>{
-        return fetch(`http://localhost:3001/api/stores/${store}/${zipCode}`,{
+        return fetch(`u${URL_PREFIX}/api/stores/${store}/${zipCode}`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json"
