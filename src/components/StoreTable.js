@@ -51,6 +51,7 @@ function StoreTable() {
 
   const updateAisle = (e) =>{
     e.preventDefault()
+    console.log(e.target.children[0].children[0].value)
     const foodID = e.target.getAttribute("id")
     fetch(`${URL_PREFIX}/api/foods/${foodID}`,{
       method:"PUT",
@@ -71,6 +72,34 @@ function StoreTable() {
         return item
       })
       setFoods(newFood)
+    })
+  }
+
+
+
+  const updateHouseAisle = (e) =>{
+    e.preventDefault()
+    console.log(e.target.children[0].children[0].value)
+    const houseID = e.target.getAttribute("id")
+    fetch(`${URL_PREFIX}/api/households/${houseID}`,{
+      method:"PUT",
+      body:JSON.stringify({
+        aisleLocation: e.target.children[0].children[0].value,
+      }),
+      headers:{
+          "Content-Type":"application/json"
+      } 
+    }).then(res=>{
+      return res.json()
+    }).then(data=>{
+      console.log(data)
+      const newHouse = houseItems.map(item=>{
+        if (item._id == houseID){
+          return data
+        }
+        return item
+      })
+      setHouseItems(newHouse)
     })
   }
 
@@ -112,7 +141,7 @@ function StoreTable() {
           <td>Cereal<img src={require("../icons/foodIcons/icons8-cereal-48.png")}></img></td>
           <td>{foodItems?.find(cerealItem=>(cerealItem.typeName.toLowerCase()==="cereal"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(cerealItem=>(cerealItem.typeName.toLowerCase()==="cereal"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -126,7 +155,7 @@ function StoreTable() {
           <td>Granola Bars</td>
           <td>{foodItems?.find(GranolaBarIteam=>(GranolaBarIteam.typeName.toLowerCase()==="granola bars"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(barItem=>(barItem.typeName.toLowerCase()==="granola bars"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -140,7 +169,7 @@ function StoreTable() {
           <td>Pasta<img src={require("../icons/foodIcons/icons8-spaghetti-48.png")}></img></td>
           <td>{foodItems?.find(pastaIteam=>(pastaIteam.typeName.toLowerCase()==="pasta"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(pastaIteam=>(pastaIteam.typeName.toLowerCase()==="pasta"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -154,7 +183,7 @@ function StoreTable() {
           <td>Jams<img src={require("../icons/foodIcons/icons8-bread-48.png")}></img></td>
           <td>{foodItems?.find(jamItem=>(jamItem.typeName.toLowerCase()==="jams"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(jamItem=>(jamItem.typeName.toLowerCase()==="jams"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -168,7 +197,7 @@ function StoreTable() {
           <td>Coffee<img src={require("../icons/foodIcons/icons8-coffee-pot-48.png")}></img></td>
           <td>{foodItems?.find(coffeeItem=>(coffeeItem.typeName.toLowerCase()==="coffee"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(coffeeItem=>(coffeeItem.typeName.toLowerCase()==="coffee"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -182,7 +211,7 @@ function StoreTable() {
           <td>Tea<img src={require("../icons/foodIcons/icons8-teapot-48.png")}></img></td>
           <td>{foodItems?.find(teaItem=>(teaItem.typeName.toLowerCase()==="tea"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(teaItem=>(teaItem.typeName.toLowerCase()==="tea"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -196,7 +225,7 @@ function StoreTable() {
           <td>Baking<img src={require("../icons/foodIcons/icons8-bake-48.png")}></img></td>
           <td>{foodItems?.find(bakingItem=>(bakingItem.typeName.toLowerCase()==="baking"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(bakingItem=>(bakingItem.typeName.toLowerCase()==="baking"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -209,13 +238,22 @@ function StoreTable() {
         <tr>
           <td>Bulk Foods<img src={require("../icons/foodIcons/icons8-bulk-food-48.png")}></img></td>
           <td>{foodItems?.find(bulkItem=>(bulkItem.typeName.toLowerCase()==="bulk foods"))?.aisleLocation}</td>
-          <td></td>
+          <td>
+          <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(bulkItem=>(bulkItem.typeName.toLowerCase()==="bulk foods"))?._id}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
         </tr>
         <tr>
           <td>Chips<img src={require("../icons/foodIcons/icons8-nachos-48.png")}></img></td>
           <td>{foodItems?.find(chipsItem=>(chipsItem.typeName.toLowerCase()==="chips"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(chipsItem=>(chipsItem.typeName.toLowerCase()==="chips"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -228,13 +266,8 @@ function StoreTable() {
       <tr>
           <td>Rice<img src={require("../icons/foodIcons/icons8-rice-bowl-48.png")}></img></td>
           <td>{foodItems?.find(riceItem=>(riceItem.typeName.toLowerCase()==="rice"))?.aisleLocation}</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Condiments<img src={require("../icons/foodIcons/icons8-mustard-48.png")}></img></td>
-          <td>{foodItems?.find(condimentsItem=>(condimentsItem.typeName.toLowerCase()==="condiments"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+          <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(riceItem=>(riceItem.typeName.toLowerCase()==="rice"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -245,10 +278,24 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Salad Dressing</td>
+          <td>Condiments<img src={require("../icons/foodIcons/icons8-mustard-48.png")}></img></td>
+          <td>{foodItems?.find(condimentsItem=>(condimentsItem.typeName.toLowerCase()==="condiments"))?.aisleLocation}</td>
+          <td>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(condimentsItem=>(condimentsItem.typeName.toLowerCase()==="condiments"))?._id}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
+              </Form.Group>
+              <Button size="sm" variant="outline-success" type="submit">
+               Submit
+              </Button>
+            </Form>
+          </td>
+        </tr>
+        <tr>
+          <td>Salad Dressing<img src={require("../icons/foodIcons/icons8-salad-48.png")}></img></td>
           <td>{foodItems?.find(saladItem=>(saladItem.typeName.toLowerCase()==="salad dressing"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(saladItem=>(saladItem.typeName.toLowerCase()==="salad dressing"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -262,7 +309,7 @@ function StoreTable() {
           <td>Eggs<img src={require("../icons/foodIcons/icons8-egg-carton-48.png")}></img></td>
           <td>{foodItems?.find(eggsItem=>(eggsItem.typeName.toLowerCase()==="eggs"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(eggsItem=>(eggsItem.typeName.toLowerCase()==="eggs"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -276,7 +323,7 @@ function StoreTable() {
           <td>Juice<img src={require("../icons/foodIcons/icons8-lemonade-48.png")}></img></td>
           <td>{foodItems?.find(juiceItem=>(juiceItem.typeName.toLowerCase()==="juice"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(juiceItem=>(juiceItem.typeName.toLowerCase()==="juice"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -290,7 +337,7 @@ function StoreTable() {
           <td>Butter<img src={require("../icons/foodIcons/icons8-butter-48.png")}></img></td>
           <td>{foodItems?.find(butterItem=>(butterItem.typeName.toLowerCase()==="butter"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(butterItem=>(butterItem.typeName.toLowerCase()==="butter"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -304,7 +351,7 @@ function StoreTable() {
           <td>Milk<img src={require("../icons/foodIcons/icons8-milk-48.png")}></img></td>
           <td>{foodItems?.find(milkItem=>(milkItem.typeName.toLowerCase()==="milk"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(milkItem=>(milkItem.typeName.toLowerCase()==="milk"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -318,7 +365,7 @@ function StoreTable() {
           <td>Creamer<img src={require("../icons/foodIcons/icons8-creamer-48.png")}></img></td>
           <td>{foodItems?.find(creamerItem=>(creamerItem.typeName.toLowerCase()==="creamer"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(creamerItem=>(creamerItem.typeName.toLowerCase()==="creamer"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -332,7 +379,7 @@ function StoreTable() {
           <td>Cheese<img src={require("../icons/foodIcons/icons8-cheese-48.png")}></img></td>
           <td>{foodItems?.find(cheeseItem=>(cheeseItem.typeName.toLowerCase()==="cheese"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(cheeseItem=>(cheeseItem.typeName.toLowerCase()==="cheese"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -362,7 +409,7 @@ function StoreTable() {
           <td>Pizza<img src={require("../icons/foodIcons/icons8-pizza-48.png")}></img></td>
           <td>{foodItems?.find(pizzaIteam=>(pizzaIteam.typeName.toLowerCase()==="frozen pizza"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(pizzaIteam=>(pizzaIteam.typeName.toLowerCase()==="frozen pizza"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -376,7 +423,7 @@ function StoreTable() {
           <td>Single Meals<img src={require("../icons/foodIcons/icons8-meal-48.png")}></img></td>
           <td>{foodItems?.find(singelMealsItem=>(singelMealsItem.typeName.toLowerCase()==="frozen single meals"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(singelMealsItem=>(singelMealsItem.typeName.toLowerCase()==="frozen single meals"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -390,7 +437,7 @@ function StoreTable() {
           <td>Burritos</td>
           <td>{foodItems?.find(burritoItem=>(burritoItem.typeName.toLowerCase()==="frozen burritos"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(burritoItem=>(burritoItem.typeName.toLowerCase()==="frozen buttitos"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -404,7 +451,7 @@ function StoreTable() {
           <td>Family Meals<img src={require("../icons/foodIcons/icons8-family-48.png")}></img></td>
           <td>{foodItems?.find(familyMealsItem=>(familyMealsItem.typeName.toLowerCase()==="frozen family meals"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(familyMealsItem=>(familyMealsItem.typeName.toLowerCase()==="frozen family meals"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -418,7 +465,7 @@ function StoreTable() {
           <td>Vegetables<img src={require("../icons/foodIcons/icons8-broccolini-48.png")}></img></td>
           <td>{foodItems?.find(vegetableItems=>(vegetableItems.typeName.toLowerCase()==="frozen vegetables"))?.aisleLocation}</td>
           <td>
-           <Form className='text-center'>
+           <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(vegetableItems=>(vegetableItems.typeName.toLowerCase()==="frozen vegetables"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -429,10 +476,10 @@ function StoreTable() {
           </td>
         </tr>
         <tr>
-          <td>Meats</td>
+          <td>Meats<img src={require("../icons/foodIcons/icons8-cuts-of-beef-48.png")}></img></td>
           <td>{foodItems?.find(meatItem=>(meatItem.typeName.toLowerCase()==="frozen meats"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(meatItem=>(meatItem.typeName.toLowerCase()==="frozen meats"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -462,7 +509,7 @@ function StoreTable() {
           <td>Tomatoes<img src={require("../icons/foodIcons/icons8-tomatoes-48.png")}></img></td>
           <td>{foodItems?.find(tomatosItem=>(tomatosItem.typeName.toLowerCase()==="canned tomatoes"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(tomatosItem=>(tomatosItem.typeName.toLowerCase()==="canned tomatoes"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -476,7 +523,7 @@ function StoreTable() {
           <td>Beans<img src={require("../icons/foodIcons/icons8-white-beans-48.png")}></img></td>
           <td>{foodItems?.find(beansItem=>(beansItem.typeName.toLowerCase()==="canned beans"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(beansItem=>(beansItem.typeName.toLowerCase()==="canned beans"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -490,7 +537,7 @@ function StoreTable() {
           <td>Peas<img src={require("../icons/foodIcons/icons8-peas-48.png")}></img></td>
           <td>{foodItems?.find(peasItem=>(peasItem.typeName.toLowerCase()==="canned peas"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(peasItem=>(peasItem.typeName.toLowerCase()==="canned peas"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -504,7 +551,7 @@ function StoreTable() {
           <td>Peaches<img src={require("../icons/foodIcons/icons8-peach-48.png")}></img></td>
           <td>{foodItems?.find(peachesItem=>(peachesItem.typeName.toLowerCase()==="canned peaches"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(peachesItem=>(peachesItem.typeName.toLowerCase()==="canned peaches"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -518,7 +565,7 @@ function StoreTable() {
           <td>Tuna<img src={require("../icons/foodIcons/icons8-tuna-48.png")}></img></td>
           <td>{foodItems?.find(tunaItems=>(tunaItems.typeName.toLowerCase()==="canned tuna"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(tunaItems=>(tunaItems.typeName.toLowerCase()==="canned tuna"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -532,7 +579,7 @@ function StoreTable() {
           <td>Chili<img src={require("../icons/foodIcons/icons8-chili-pepper-48.png")}></img></td>
           <td>{foodItems?.find(chiliItem=>(chiliItem.typeName.toLowerCase()==="canned chili"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(chiliItem=>(chiliItem.typeName.toLowerCase()==="canned chili"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -546,7 +593,7 @@ function StoreTable() {
           <td>Soup<img src={require("../icons/foodIcons/icons8-soup-plate-48.png")}></img></td>
           <td>{foodItems?.find(soupItem=>(soupItem.typeName.toLowerCase()==="canned soup"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateAisle} className='text-center' id={foodItems?.find(soupItem=>(soupItem.typeName.toLowerCase()==="canned soup"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -583,7 +630,7 @@ function StoreTable() {
         <td>Paper Towels<img src={require("../icons/houseIcons/icons8-wipes-48.png")}></img></td>
         <td>{houseItems?.find(papertowelItem=>(papertowelItem.typeName.toLowerCase()==="paper towels"))?.aisleLocation}</td>
         <td>
-         <Form className='text-center'>
+         <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(papertowelItem=>(papertowelItem.typeName.toLowerCase()==="paper towels"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -597,7 +644,7 @@ function StoreTable() {
         <td>Napkins<img src={require("../icons/houseIcons/icons8-wipes-48.png")}></img></td>
         <td>{houseItems?.find(napkinItem=>(napkinItem.typeName.toLowerCase()==="napkins"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(napkinItem=>(napkinItem.typeName.toLowerCase()==="napkins"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -611,7 +658,7 @@ function StoreTable() {
         <td>Rubber Gloves<img src={require("../icons/houseIcons/icons8-rubber-gloves-48.png")}></img></td>
         <td>{houseItems?.find(rubbergloveItem=>(rubbergloveItem.typeName.toLowerCase()==="rubber gloves"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(rubbergloveItem=>(rubbergloveItem.typeName.toLowerCase()==="rubber gloves"))?._id}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
               </Form.Group>
@@ -625,7 +672,7 @@ function StoreTable() {
         <td>Sponges<img src={require("../icons/houseIcons/icons8-absorb-48.png")}></img></td>
         <td>{houseItems?.find(spongeItem=>(spongeItem.typeName.toLowerCase()==="sponges"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(spongeItem=>(spongeItem.typeName.toLowerCase()==="sponges"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -639,7 +686,7 @@ function StoreTable() {
         <td>Detergent<img src={require("../icons/houseIcons/icons8-wash-by-hand-48.png")}></img></td>
         <td>{houseItems?.find(detergentItem=>(detergentItem.typeName.toLowerCase()==="detergent"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(detergentItem=>(detergentItem.typeName.toLowerCase()==="detergent"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -653,7 +700,7 @@ function StoreTable() {
         <td>Fabric Softener<img src={require("../icons/houseIcons/icons8-wash-by-hand-48.png")}></img></td>
         <td>{houseItems?.find(fabricItem=>(fabricItem.typeName.toLowerCase()==="fabric softener"))?.aisleLocation}</td>
         <td>
-         <Form className='text-center'>
+         <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(fabricItem=>(fabricItem.typeName.toLowerCase()==="fabric softener"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -667,7 +714,7 @@ function StoreTable() {
         <td>Cleaners<img src={require("../icons/houseIcons/icons8-spray-48.png")}></img></td>
         <td>{houseItems?.find(cleanerItem=>(cleanerItem.typeName.toLowerCase()==="cleaners"))?.aisleLocation}</td>
         <td>
-         <Form className='text-center'>
+         <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(cleanerItem=>(cleanerItem.typeName.toLowerCase()==="cleaners"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -681,7 +728,7 @@ function StoreTable() {
         <td>Garbage Bags<img src={require("../icons/houseIcons/icons8-trash-can-48.png")}></img></td>
         <td>{houseItems?.find(garbageItem=>(garbageItem.typeName.toLowerCase()==="garbage bags"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(garbageItem=>(garbageItem.typeName.toLowerCase()==="garbage bags"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -695,7 +742,7 @@ function StoreTable() {
         <td>Toilet Paper<img src={require("../icons/houseIcons/icons8-toilet-paper-48.png")}></img></td>
         <td>{houseItems?.find(toiletPaperItem=>(toiletPaperItem.typeName.toLowerCase()==="toilet paper"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(toiletPaperItem=>(toiletPaperItem.typeName.toLowerCase()==="toilet paper"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -709,7 +756,7 @@ function StoreTable() {
         <td>Brooms and Mops<img src={require("../icons/houseIcons/icons8-housekeeping-48.png")}></img></td>
         <td>{houseItems?.find(broomsItem=>(broomsItem.typeName.toLowerCase()==="brooms and mops"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(broomsItem=>(broomsItem.typeName.toLowerCase()==="brooms and mops"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -739,7 +786,7 @@ function StoreTable() {
           <td>Hair Products<img src={require("../icons/houseIcons/icons8-hair-brush-48.png")}></img></td>
           <td>{houseItems?.find(hairsItems=>(hairsItems.typeName.toLowerCase()==="hair products"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(hairsItems=>(hairsItems.typeName.toLowerCase()==="hair products"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -753,7 +800,7 @@ function StoreTable() {
           <td>Cold and Flu<img src={require("../icons/houseIcons/icons8-virus-48.png")}></img></td>
           <td>{houseItems?.find(coldItems=>(coldItems.typeName.toLowerCase()==="cold and flu"))?.aisleLocation}</td>
           <td>
-            <Form className='text-center'>
+            <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(coldItems=>(coldItems.typeName.toLowerCase()==="cold and flu"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -767,7 +814,7 @@ function StoreTable() {
         <td>Pain Medication<img src={require("../icons/houseIcons/icons8-pill-48.png")}></img></td>
         <td>{houseItems?.find(painItem=>(painItem.typeName.toLowerCase()==="pain medication"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(painItem=>(painItem.typeName.toLowerCase()==="frozen meats"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -781,7 +828,7 @@ function StoreTable() {
         <td>Contraception<img src={require("../icons/houseIcons/icons8-pregnancy-test-48.png")}></img></td>
         <td>{houseItems?.find(contraceptionItem=>(contraceptionItem.typeName.toLowerCase()==="contraception"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(contraceptionItem=>(contraceptionItem.typeName.toLowerCase()==="contraception"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -812,7 +859,7 @@ function StoreTable() {
         <td>Formula<img src={require("../icons/houseIcons/icons8-baby-bottle-48.png")}></img></td>
         <td>{houseItems?.find(formulaItem=>(formulaItem.typeName.toLowerCase()==="baby formula"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(formulaItem=>(formulaItem.typeName.toLowerCase()==="baby formula"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
@@ -826,7 +873,7 @@ function StoreTable() {
         <td>Diapers<img src={require("../icons/houseIcons/icons8-nappy-48.png")}></img></td>
         <td>{houseItems?.find(diapersItem=>(diapersItem.typeName.toLowerCase()==="baby diapers"))?.aisleLocation}</td>
         <td>
-          <Form className='text-center'>
+          <Form onSubmit={updateHouseAisle} className='text-center' id={houseItems?.find(diapersItem=>(diapersItem.typeName.toLowerCase()==="baby diapers"))?._id}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control className='text-center' size="small" type="input" placeholder="Update Aisle" />
                 </Form.Group>
